@@ -133,7 +133,7 @@ jobs:
         run:  docker-compose -f production.yml -f staging.yml down
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2.0.2
         with:
           terraform_version: 1.0.9
 
