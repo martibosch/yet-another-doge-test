@@ -90,32 +90,32 @@ jobs:
           mkdir -p .envs/.production
           mkdir -p .envs/.staging
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3.0.1
         with:
           name: production-django
           path: .envs/.production
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3.0.1
         with:
           name: production-postgres
           path: .envs/.production
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3.0.1
         with:
           name: production-traefik
           path: .envs/.production
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3.0.1
         with:
           name: staging-django
           path: .envs/.staging
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3.0.1
         with:
           name: staging-traefik
           path: .envs/.staging
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3.0.1
         with:
           name: staging-tfvars
           path: terraform
@@ -150,7 +150,7 @@ jobs:
           terraform workspace select staging
 
       - name: Download tfvars
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3.0.1
         with:
           name: staging-tfvars
           path: terraform
